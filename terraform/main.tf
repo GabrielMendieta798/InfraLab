@@ -2,19 +2,19 @@ resource "aws_instance" "monitoring" {
   ami           = var.ami_id
   instance_type = var.instance_type
 
-metadata_options {
+  metadata_options {
     http_tokens = "required"
   }
 
-credits_specification {
+  credit_specification {
     cpu_credits = "standard"
-  } 
+  }
 
 
   tags = {
-    Name = "InfraLab-Monitoring"
+    Name        = "InfraLab-Monitoring"
     Environment = "Lab"
-    Project = "infraLab"
-    ManagedBy = "Terraform"
+    Project     = "infraLab"
+    ManagedBy   = "Terraform"
   }
 }
