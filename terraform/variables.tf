@@ -8,3 +8,8 @@ variable "ami_id" {
   description = "AMI ID used for ec2 monitoring instance"
   type        = string
 }
+
+variable "notification_email" {
+  description = "Email address for CloudWatch alarm notifications"
+  type        = string
+}
