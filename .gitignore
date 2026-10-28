@@ -1,0 +1,31 @@
+# Terraform local files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform variable files with sensitive values
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Ansible local files
+*.retry
+
+# Editor and OS files
+.vscode/
+.DS_Store
