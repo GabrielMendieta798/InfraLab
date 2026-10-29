@@ -1,0 +1,14 @@
+---
+- name: Configure InfraLab EC2
+  hosts: monitoring
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Install CPU stress script
+      ansible.builtin.copy:
+        src: ../files/cpu-stress.sh
+        dest: /usr/local/bin/infralab-stress
+        owner: root
+        group: root
+        mode: "0755"
